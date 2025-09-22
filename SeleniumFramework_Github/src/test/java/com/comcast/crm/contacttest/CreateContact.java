@@ -19,6 +19,9 @@ public class CreateContact extends BaseClass {
 
 	@Test(groups = "SmokeTest")
 	public void createContact() throws EncryptedDocumentException, IOException {
+		
+		System.out.println("Modification done");
+		
 		// Read Data from Excel
 		String LASTNAME = eu.getDataFromExcel("Contacts", 1, 2) + ju.getRandomNumber();
 
