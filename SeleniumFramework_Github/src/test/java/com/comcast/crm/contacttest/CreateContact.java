@@ -37,6 +37,8 @@ public class CreateContact extends BaseClass {
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
 		Assert.assertEquals(header, LASTNAME); // Hard Assert
+		
+		System.out.println("create contact is verified");
 	}
 
 	@Test(groups = "RegressionTest")
@@ -44,6 +46,7 @@ public class CreateContact extends BaseClass {
 		// Read Data from Excel
 		String LASTNAME = eu.getDataFromExcel("Contacts", 7, 2) + ju.getRandomNumber();
 		String ORGNAME = eu.getDataFromExcel("Contacts", 7, 3) + ju.getRandomNumber();
+		
 
 		// Navigate and Create Organization
 		HomePage hp = new HomePage(driver);
