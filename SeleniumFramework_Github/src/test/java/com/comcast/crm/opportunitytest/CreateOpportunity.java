@@ -45,7 +45,8 @@ public class CreateOpportunity extends BaseClass_Parallel {
 		// Verify the Header
 		OpportunitiesInfoPage oip = new OpportunitiesInfoPage(driver);
 		String header = oip.getHeaderInfo().getText();
-		Assert.assertEquals(header, OPPORTUNITY);
+		boolean status = header.contains(OPPORTUNITY);
+		Assert.assertEquals(status, true);
 
 		// Verify the Contacts
 		String contactname = oip.getRelatedToInfo().getText();

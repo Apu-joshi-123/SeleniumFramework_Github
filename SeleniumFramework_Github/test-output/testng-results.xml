@@ -20,48 +20,47 @@
       <![CDATA[====Close DB Connection, Report Backup====]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-09-24T14:52:26 IST" name="Default suite" finished-at="2025-09-24T14:53:57 IST" duration-ms="91298">
+  <suite started-at="2025-09-24T16:43:18 IST" name="Default suite" finished-at="2025-09-24T16:43:38 IST" duration-ms="19718">
     <groups>
-      <group name="SmokeTest">
-        <method signature="CreateOrganization.createOrganization()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" name="createOrganization" class="com.comcast.crm.organizationtest.CreateOrganization"/>
-      </group> <!-- SmokeTest -->
+      <group name="RegressionTest">
+        <method signature="CreateOrganization.createOrganizationWithPhoneNumber()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" name="createOrganizationWithPhoneNumber" class="com.comcast.crm.organizationtest.CreateOrganization"/>
+      </group> <!-- RegressionTest -->
     </groups>
-    <test started-at="2025-09-24T14:52:26 IST" name="Default test" finished-at="2025-09-24T14:53:57 IST" duration-ms="91298">
+    <test started-at="2025-09-24T16:43:18 IST" name="Default test" finished-at="2025-09-24T16:43:38 IST" duration-ms="19718">
       <class name="com.comcast.crm.organizationtest.CreateOrganization">
-        <test-method is-config="true" signature="connectToDB()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T14:52:26 IST" name="connectToDB" finished-at="2025-09-24T14:52:26 IST" duration-ms="274" status="PASS">
+        <test-method is-config="true" signature="connectToDB()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T16:43:18 IST" name="connectToDB" finished-at="2025-09-24T16:43:18 IST" duration-ms="140" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Connect To DB, Report Configuration====]]>
             </line>
           </reporter-output>
         </test-method> <!-- connectToDB -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T14:52:26 IST" name="openBrowser" finished-at="2025-09-24T14:52:59 IST" duration-ms="33394" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T16:43:18 IST" name="openBrowser" finished-at="2025-09-24T16:43:24 IST" duration-ms="5477" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Open Browser====]]>
             </line>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T14:52:59 IST" name="loginToApplication" finished-at="2025-09-24T14:53:43 IST" duration-ms="43265" status="PASS">
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T16:43:24 IST" name="loginToApplication" finished-at="2025-09-24T16:43:25 IST" duration-ms="986" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Login To Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- loginToApplication -->
-        <test-method signature="createOrganization()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T14:53:43 IST" name="createOrganization" finished-at="2025-09-24T14:53:43 IST" duration-ms="13" status="FAIL">
-          <exception class="java.io.FileNotFoundException">
+        <test-method signature="createOrganizationWithPhoneNumber()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T16:43:25 IST" name="createOrganizationWithPhoneNumber" finished-at="2025-09-24T16:43:36 IST" duration-ms="11769" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[.\testData\testdata.xlsx (The system cannot find the path specified)]]>
+              <![CDATA[The following asserts failed:
+expected [9876543210] but found [  9876543210]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: .\testData\testdata.xlsx (The system cannot find the path specified)
-at java.base/java.io.FileInputStream.open0(Native Method)
-at java.base/java.io.FileInputStream.open(FileInputStream.java:185)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
-at com.comcast.crm.generic.fileutility.ExcelUtility.getDataFromExcel(ExcelUtility.java:28)
-at com.comcast.crm.organizationtest.CreateOrganization.createOrganization(CreateOrganization.java:21)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [9876543210] but found [  9876543210]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at com.comcast.crm.organizationtest.CreateOrganization.createOrganizationWithPhoneNumber(CreateOrganization.java:94)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -90,25 +89,25 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createOrganization -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T14:53:43 IST" name="logout" finished-at="2025-09-24T14:53:57 IST" duration-ms="14139" status="PASS">
+        </test-method> <!-- createOrganizationWithPhoneNumber -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T16:43:36 IST" name="logout" finished-at="2025-09-24T16:43:38 IST" duration-ms="1201" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Logout of Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T14:53:57 IST" name="closeBrowser" finished-at="2025-09-24T14:53:57 IST" duration-ms="444" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T16:43:38 IST" name="closeBrowser" finished-at="2025-09-24T16:43:38 IST" duration-ms="238" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Close Browser====]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="closeDBConnection()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T14:53:57 IST" name="closeDBConnection" finished-at="2025-09-24T14:53:57 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeDBConnection()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganization@478190fc]" started-at="2025-09-24T16:43:38 IST" name="closeDBConnection" finished-at="2025-09-24T16:43:38 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Close DB Connection, Report Backup====]]>

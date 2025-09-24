@@ -8,8 +8,8 @@
           <include name="logout"/>
           <include name="closeBrowser"/>
           <include name="connectToDB"/>
-          <include name="createOrganization"/>
           <include name="closeDBConnection"/>
+          <include name="createOrganizationWithPhoneNumber"/>
           <include name="loginToApplication"/>
           <include name="openBrowser"/>
         </methods>

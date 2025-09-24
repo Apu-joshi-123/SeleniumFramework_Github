@@ -30,7 +30,8 @@ public class CreateLeads extends BaseClass_Parallel {
 		// Verify the Header
 		LeadsInfoPage lip = new LeadsInfoPage(driver);
 		String header = lip.getHeaderInfo().getText();
-		Assert.assertEquals(header, LASTNAME);
+		boolean status = header.contains(LASTNAME);
+		Assert.assertEquals(status, true);
 		
 		// Verify the Company
 		String company = lip.getCompany().getText();

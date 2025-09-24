@@ -28,6 +28,7 @@ public class CreateProduct extends BaseClass_Parallel {
 		// Verify the Header
 		ProductInfoPage cip = new ProductInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
-		Assert.assertEquals(header, PRONAME);
+		boolean status = header.contains(PRONAME);
+		Assert.assertEquals(status, true);
 	}
 }

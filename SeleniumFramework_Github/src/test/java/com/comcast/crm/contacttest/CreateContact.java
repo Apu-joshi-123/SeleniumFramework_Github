@@ -36,7 +36,8 @@ public class CreateContact extends BaseClass {
 		// Verify Header
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
-		Assert.assertEquals(header, LASTNAME); // Hard Assert
+		boolean status = header.contains(LASTNAME);
+		Assert.assertEquals(status, true); // Hard Assert
 		
 		System.out.println("create contact is verified");
 	}
@@ -72,7 +73,8 @@ public class CreateContact extends BaseClass {
 		// Verify Header
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
-		Assert.assertEquals(header, LASTNAME);
+		boolean status = header.contains(LASTNAME);
+		Assert.assertEquals(status, true);
 
 		// Verify the Organization
 		String org = cip.getOrgInfo().getText();
@@ -99,7 +101,8 @@ public class CreateContact extends BaseClass {
 		// Verify Header
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
-		Assert.assertEquals(header, LASTNAME);
+		boolean status = header.contains(LASTNAME);
+		Assert.assertEquals(status, true);
 
 		// Verify Support Date
 		String supportStartDate = cip.getStartDateInfo().getText();

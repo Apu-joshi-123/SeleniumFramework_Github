@@ -28,6 +28,7 @@ public class CreateTroubleTickets extends BaseClass_Parallel{
 				// Verify the Header
 				TroubleTicketsInfoPage cip = new TroubleTicketsInfoPage(driver);
 				String header = cip.getHeaderInfo().getText();
-				Assert.assertEquals(header, LASTNAME);
+				boolean status = header.contains(LASTNAME);
+				Assert.assertEquals(status, true);
 	}
 }

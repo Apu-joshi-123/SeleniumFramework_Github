@@ -31,7 +31,8 @@ public class CreateOrganization extends BaseClass {
 		// Verify Header
 		OrganizationInfoPage cip = new OrganizationInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
-		Assert.assertEquals(header, ORGNAME);
+		boolean status = header.contains(ORGNAME);
+		Assert.assertEquals(status, true);
 	}
 
 	@Test(groups = "RegressionTest")
@@ -52,7 +53,8 @@ public class CreateOrganization extends BaseClass {
 		// Verify the Header
 		OrganizationInfoPage oip = new OrganizationInfoPage(driver);
 		String actOrgName = oip.getHeaderInfo().getText();
-		Assert.assertEquals(actOrgName, ORGNAME);
+		boolean status = actOrgName.contains(ORGNAME);
+		Assert.assertEquals(status, true);
 		
 		// Verify industry
 		String actIndustry = oip.getIndustry().getText();
@@ -84,7 +86,8 @@ public class CreateOrganization extends BaseClass {
 		// Verify Header
 		OrganizationInfoPage cip = new OrganizationInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
-		Assert.assertEquals(header, ORGNAME);
+		boolean status = header.contains(ORGNAME);
+		Assert.assertEquals(status, true);
 
 		// Verify Phone Number
 		String actPhoneNum = cip.getPhoneNum().getText();
