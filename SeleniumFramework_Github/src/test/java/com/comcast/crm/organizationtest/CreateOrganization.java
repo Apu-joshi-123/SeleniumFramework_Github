@@ -91,6 +91,5 @@ public class CreateOrganization extends BaseClass {
 		SoftAssert assertobj = new SoftAssert();
 		assertobj.assertEquals(actPhoneNum, PHONENUM);
 		assertobj.assertAll();
-		System.out.println("Added");
 	}
 }
