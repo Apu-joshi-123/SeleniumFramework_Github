@@ -9,8 +9,17 @@ import com.comcast.crm.baseclass.BaseClass;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 
+/**
+ * This class is used to create the campaigns.
+ * @author Apurva
+ */
 public class CreateCampaigns extends BaseClass {
 
+	/**
+	 * This method is used to create the campaigns by entering the details.
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 */
 	@Test
 	public void createCampaigns () throws EncryptedDocumentException, IOException {
 		HomePage hp = new HomePage(driver);
@@ -23,7 +32,6 @@ public class CreateCampaigns extends BaseClass {
 		cp.getCampaignName().sendKeys(NAME);
 		cp.getSaveBtn().click();
 		
-		System.out.println("Done");
 	}
 	
 }
