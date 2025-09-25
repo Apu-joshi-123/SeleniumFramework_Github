@@ -3,7 +3,13 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.comcast.flipkarttest.SelectProductUsingExcel"/>
+      <class name="com.comcast.crm.campaignstest.CreateCampaigns"/>
+      <class name="com.comcast.crm.producttest.CreateProduct"/>
+      <class name="com.comcast.crm.opportunitytest.CreateOpportunity"/>
+      <class name="com.comcast.crm.organizationtest.CreateOrganization"/>
+      <class name="com.comcast.crm.contacttest.CreateContact"/>
+      <class name="com.comcast.crm.leadstest.CreateLeads"/>
+      <class name="com.comcast.crm.troubleticketstest.CreateTroubleTickets"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
