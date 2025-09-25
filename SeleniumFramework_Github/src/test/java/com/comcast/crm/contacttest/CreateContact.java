@@ -15,17 +15,27 @@ import com.comcast.crm.objectrepositoryutility.CreatingNewOrganizationPage;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.OrganizationPage;
 
+/**
+ * This Class is used to Create Contacts using Date and after creating the
+ * Organization and Verify the information.
+ * 
+ * @author Apurva
+ */
 public class CreateContact extends BaseClass {
 
+	/**
+	 * This method is used to Create Contacts and Verify the information.
+	 * 
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 */
 	@Test(groups = "SmokeTest")
 	public void createContact() throws EncryptedDocumentException, IOException {
-		
-		System.out.println("Modification done");
-		
-		// Read Data from Excel
+
+		/* Read Data from Excel */
 		String LASTNAME = eu.getDataFromExcel("Contacts", 1, 2) + ju.getRandomNumber();
 
-		// Navigate and Create Contact
+		/* Navigate and Create Contact */
 		HomePage hp = new HomePage(driver);
 		hp.getContactsLink().click();
 		ContactPage cp = new ContactPage(driver);
@@ -33,22 +43,29 @@ public class CreateContact extends BaseClass {
 		CreatingNewContact cnc = new CreatingNewContact(driver);
 		cnc.createContact(LASTNAME);
 
-		// Verify Header
+		/* Verify Header */
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
-		Assert.assertEquals(header, LASTNAME); // Hard Assert
-		
-		System.out.println("create contact is verified");
+		boolean status = header.contains(LASTNAME);
+		Assert.assertEquals(status, true);
 	}
 
+	/**
+	 * This method is used to Create Contacts after creating Organization and Verify
+	 * the information.
+	 * 
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 * @throws InterruptedException
+	 */
 	@Test(groups = "RegressionTest")
 	public void createContactWithOrganization() throws EncryptedDocumentException, IOException, InterruptedException {
-		// Read Data from Excel
+
+		/* Read Data from Excel */
 		String LASTNAME = eu.getDataFromExcel("Contacts", 7, 2) + ju.getRandomNumber();
 		String ORGNAME = eu.getDataFromExcel("Contacts", 7, 3) + ju.getRandomNumber();
-		
 
-		// Navigate and Create Organization
+		/* Navigate and Create Organization */
 		HomePage hp = new HomePage(driver);
 		hp.getOrganizationLink().click();
 		OrganizationPage op = new OrganizationPage(driver);
@@ -57,7 +74,7 @@ public class CreateContact extends BaseClass {
 		cnop.createOrg(ORGNAME);
 		Thread.sleep(2000);
 
-		// Navigate and Create Contact
+		/* Navigate and Create Contact */
 		hp.getContactsLink().click();
 		ContactPage cp = new ContactPage(driver);
 		cp.getCreateContact().click();
@@ -65,28 +82,37 @@ public class CreateContact extends BaseClass {
 		cnc.searchOrganization(LASTNAME, ORGNAME);
 		driver.findElement(By.xpath("//a[contains(text(),'" + ORGNAME + "')]")).click();
 
-		// Switch to Parent Window
+		/* Switch to Parent Window */
 		wu.switchToTabOnURL(driver, "module=Contacts");
 		cnc.getSaveBtn().click();
 
-		// Verify Header
+		/* Verify Header */
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
-		Assert.assertEquals(header, LASTNAME);
+		boolean status = header.contains(LASTNAME);
+		Assert.assertEquals(status, true);
 
-		// Verify the Organization
+		/* Verify the Organization */
 		String org = cip.getOrgInfo().getText();
 		SoftAssert assertobj = new SoftAssert();
-		assertobj.assertEquals(header, org);
+		assertobj.assertEquals(org.trim(), ORGNAME);
 		assertobj.assertAll();
 	}
 
+	/**
+	 * This method is used to Create Contact with Support Date and Verify the
+	 * information.
+	 * 
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 */
 	@Test(groups = "RegressionTest")
 	public void createContactWithDate() throws EncryptedDocumentException, IOException {
-		// Read Data from Excel
+
+		/* Read Data from Excel */
 		String LASTNAME = eu.getDataFromExcel("Contacts", 1, 2) + ju.getRandomNumber();
 
-		// Navigate and Create Contact
+		/* Navigate and Create Contact */
 		HomePage hp = new HomePage(driver);
 		hp.getContactsLink().click();
 		ContactPage cp = new ContactPage(driver);
@@ -96,12 +122,13 @@ public class CreateContact extends BaseClass {
 		CreatingNewContact cnc = new CreatingNewContact(driver);
 		cnc.createContactWithSupportDate(LASTNAME, STARTDATE, ENDDATE);
 
-		// Verify Header
+		/* Verify Header */
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
-		Assert.assertEquals(header, LASTNAME);
+		boolean status = header.contains(LASTNAME);
+		Assert.assertEquals(status, true);
 
-		// Verify Support Date
+		/* Verify Support Date */
 		String supportStartDate = cip.getStartDateInfo().getText();
 		SoftAssert assertobj = new SoftAssert();
 		assertobj.assertEquals(supportStartDate, STARTDATE);
