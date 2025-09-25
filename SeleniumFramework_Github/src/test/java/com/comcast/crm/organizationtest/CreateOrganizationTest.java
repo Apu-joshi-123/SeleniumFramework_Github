@@ -119,7 +119,7 @@ public class CreateOrganizationTest extends BaseClass {
 		/* Verify Phone Number */
 		String actPhoneNum = cip.getPhoneNum().getText();
 		SoftAssert assertobj = new SoftAssert();
-		assertobj.assertEquals(actPhoneNum, PHONENUM);
+		assertobj.assertEquals(actPhoneNum.trim(), PHONENUM);
 		assertobj.assertAll();
 	}
 }
