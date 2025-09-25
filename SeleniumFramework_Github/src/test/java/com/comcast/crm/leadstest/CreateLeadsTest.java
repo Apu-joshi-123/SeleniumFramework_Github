@@ -17,7 +17,7 @@ import com.comcast.crm.objectrepositoryutility.LeadsPage;
  * 
  * @author Apurva
  */
-public class CreateLeads extends BaseClass {
+public class CreateLeadsTest extends BaseClass {
 
 	/**
 	 * This method is used to Create Leads and Verify the information.

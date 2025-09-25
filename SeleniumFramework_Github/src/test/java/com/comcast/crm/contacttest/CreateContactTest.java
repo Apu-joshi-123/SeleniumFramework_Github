@@ -21,7 +21,7 @@ import com.comcast.crm.objectrepositoryutility.OrganizationPage;
  * 
  * @author Apurva
  */
-public class CreateContact extends BaseClass {
+public class CreateContactTest extends BaseClass {
 
 	/**
 	 * This method is used to Create Contacts and Verify the information.

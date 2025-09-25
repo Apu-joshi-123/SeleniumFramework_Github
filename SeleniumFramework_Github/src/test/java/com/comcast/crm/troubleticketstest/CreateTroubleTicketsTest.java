@@ -16,7 +16,7 @@ import com.comcast.crm.objectrepositoryutility.TroubleTicketsInfoPage;
  * 
  * @author Apurva
  */
-public class CreateTroubleTickets extends BaseClass {
+public class CreateTroubleTicketsTest extends BaseClass {
 
 	/**
 	 * This method is used to Create Tickets and Verify the information.

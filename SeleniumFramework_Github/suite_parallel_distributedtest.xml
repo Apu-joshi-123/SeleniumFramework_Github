@@ -3,22 +3,22 @@
 <suite thread-count="4" parallel="tests" name="Suite">
   <test name="Test1">
     <classes>
-      <class name="com.comcast.crm.troubleticketstest.CreateTroubleTickets"/>
+      <class name="com.comcast.crm.troubleticketstest.CreateTroubleTicketsTest"/>
       </classes>
       </test>
       <test name="Test2">
     <classes>
-      <class name="com.comcast.crm.leadstest.CreateLeads"/>
+      <class name="com.comcast.crm.leadstest.CreateLeadsTest"/>
       </classes>
       </test>
       <test name="Test3">
     <classes>
-      <class name="com.comcast.crm.opportunitytest.CreateOpportunity"/>
+      <class name="com.comcast.crm.opportunitytest.CreateOpportunityTest"/>
       </classes>
       </test>
       <test name="Test4">
     <classes>
-      <class name="com.comcast.crm.producttest.CreateProduct"/>
+      <class name="com.comcast.crm.producttest.CreateProductTest"/>
       </classes>
   </test>
 </suite> <!-- Suite -->

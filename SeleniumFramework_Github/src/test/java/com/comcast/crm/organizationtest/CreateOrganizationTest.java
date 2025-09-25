@@ -19,7 +19,7 @@ import com.comcast.crm.objectrepositoryutility.OrganizationPage;
  * 
  * @author Apurva
  */
-public class CreateOrganization extends BaseClass {
+public class CreateOrganizationTest extends BaseClass {
 
 	/**
 	 * This method is used to Create the Organization.

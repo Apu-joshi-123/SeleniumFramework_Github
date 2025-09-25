@@ -7,8 +7,8 @@
     <parameter name="USERNAME" value="admin"/>
      <parameter name="PASSWORD" value="password"/>
     <classes>
-      <class name="com.comcast.crm.troubleticketstest.CreateTroubleTickets"/>
-      <class name="com.comcast.crm.contacttest.CreateContact"/>
+      <class name="com.comcast.crm.troubleticketstest.CreateTroubleTicketsTest"/>
+      <class name="com.comcast.crm.contacttest.CreateContactTest"/>
     </classes>
       </test>
       <test name="Test2">
@@ -17,8 +17,8 @@
     <parameter name="USERNAME" value="admin"/>
      <parameter name="PASSWORD" value="password"/>
     <classes>
-      <class name="com.comcast.crm.leadstest.CreateLeads"/>
-      <class name="com.comcast.crm.opportunitytest.CreateOpportunity"/>
+      <class name="com.comcast.crm.leadstest.CreateLeadsTest"/>
+      <class name="com.comcast.crm.opportunitytest.CreateOpportunityTest"/>
     </classes>
       </test>
       <test name="Test3">
@@ -27,8 +27,8 @@
     <parameter name="USERNAME" value="admin"/>
      <parameter name="PASSWORD" value="password"/>
     <classes>
-      <class name="com.comcast.crm.producttest.CreateProduct"/>
-      <class name="com.comcast.crm.organizationtest.CreateOrganization"/>
+      <class name="com.comcast.crm.producttest.CreateProductTest"/>
+      <class name="com.comcast.crm.organizationtest.CreateOrganizationTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
