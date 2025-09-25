@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[====Connect To DB, Report Configuration====]]>
@@ -20,101 +20,58 @@
       <![CDATA[====Close DB Connection, Report Backup====]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-09-25T16:19:06 IST" name="Default suite" finished-at="2025-09-25T16:19:39 IST" duration-ms="32223">
+  <suite started-at="2025-09-25T16:36:34 IST" name="Default suite" finished-at="2025-09-25T16:37:24 IST" duration-ms="50667">
     <groups>
-      <group name="RegressionTest">
-        <method signature="CreateOrganizationTest.createOrganizationWithPhoneNumber()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@478190fc]" name="createOrganizationWithPhoneNumber" class="com.comcast.crm.organizationtest.CreateOrganizationTest"/>
-      </group> <!-- RegressionTest -->
     </groups>
-    <test started-at="2025-09-25T16:19:06 IST" name="Default test" finished-at="2025-09-25T16:19:39 IST" duration-ms="32223">
-      <class name="com.comcast.crm.organizationtest.CreateOrganizationTest">
-        <test-method is-config="true" signature="connectToDB()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@478190fc]" started-at="2025-09-25T16:19:06 IST" name="connectToDB" finished-at="2025-09-25T16:19:06 IST" duration-ms="329" status="PASS">
+    <test started-at="2025-09-25T16:36:34 IST" name="Default test" finished-at="2025-09-25T16:37:24 IST" duration-ms="50667">
+      <class name="com.comcast.crm.opportunitytest.CreateOpportunityTest">
+        <test-method is-config="true" signature="connectToDB()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@5158b42f]" started-at="2025-09-25T16:36:33 IST" name="connectToDB" finished-at="2025-09-25T16:36:34 IST" duration-ms="248" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Connect To DB, Report Configuration====]]>
             </line>
           </reporter-output>
         </test-method> <!-- connectToDB -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@478190fc]" started-at="2025-09-25T16:19:06 IST" name="openBrowser" finished-at="2025-09-25T16:19:12 IST" duration-ms="5591" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@5158b42f]" started-at="2025-09-25T16:36:34 IST" name="openBrowser" finished-at="2025-09-25T16:36:41 IST" duration-ms="7116" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Open Browser====]]>
             </line>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@478190fc]" started-at="2025-09-25T16:19:12 IST" name="loginToApplication" finished-at="2025-09-25T16:19:18 IST" duration-ms="5944" status="PASS">
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@5158b42f]" started-at="2025-09-25T16:36:41 IST" name="loginToApplication" finished-at="2025-09-25T16:36:48 IST" duration-ms="6988" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Login To Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- loginToApplication -->
-        <test-method signature="createOrganizationWithPhoneNumber()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@478190fc]" started-at="2025-09-25T16:19:18 IST" name="createOrganizationWithPhoneNumber" finished-at="2025-09-25T16:19:35 IST" duration-ms="17599" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-expected [9876543210] but found [  9876543210]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [9876543210] but found [  9876543210]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at com.comcast.crm.organizationtest.CreateOrganizationTest.createOrganizationWithPhoneNumber(CreateOrganizationTest.java:123)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="createOpportunity()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@5158b42f]" started-at="2025-09-25T16:36:48 IST" name="createOpportunity" finished-at="2025-09-25T16:37:21 IST" duration-ms="33436" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createOrganizationWithPhoneNumber -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@478190fc]" started-at="2025-09-25T16:19:35 IST" name="logout" finished-at="2025-09-25T16:19:38 IST" duration-ms="2637" status="PASS">
+        </test-method> <!-- createOpportunity -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@5158b42f]" started-at="2025-09-25T16:37:21 IST" name="logout" finished-at="2025-09-25T16:37:24 IST" duration-ms="2648" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Logout of Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@478190fc]" started-at="2025-09-25T16:19:38 IST" name="closeBrowser" finished-at="2025-09-25T16:19:39 IST" duration-ms="374" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@5158b42f]" started-at="2025-09-25T16:37:24 IST" name="closeBrowser" finished-at="2025-09-25T16:37:24 IST" duration-ms="404" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Close Browser====]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="closeDBConnection()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@478190fc]" started-at="2025-09-25T16:19:39 IST" name="closeDBConnection" finished-at="2025-09-25T16:19:39 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeDBConnection()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@5158b42f]" started-at="2025-09-25T16:37:24 IST" name="closeDBConnection" finished-at="2025-09-25T16:37:24 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Close DB Connection, Report Backup====]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeDBConnection -->
-      </class> <!-- com.comcast.crm.organizationtest.CreateOrganizationTest -->
+      </class> <!-- com.comcast.crm.opportunitytest.CreateOpportunityTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

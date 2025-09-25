@@ -31,6 +31,7 @@ public class CreateCampaigns extends BaseClass {
 		String NAME = eu.getDataFromExcel("Campaigns", 1, 2);
 		cp.getCampaignName().sendKeys(NAME);
 		cp.getSaveBtn().click();
+		System.out.println("Campaigns Created");
 		
 	}
 	
