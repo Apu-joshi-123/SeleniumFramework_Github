@@ -8,8 +8,8 @@
 </groups>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.comcast.crm.contacttest.testng.CreateContact"/>
-      <class name="com.comcast.crm.contacttest.testng.CreateOrganization"/>
+      <class name="com.comcast.crm.contacttest.CreateContact"/>
+      <class name="com.comcast.crm.organizationtest.CreateOrganization"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
