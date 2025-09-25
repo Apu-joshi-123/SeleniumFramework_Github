@@ -30,6 +30,7 @@ public class CreateCampaigns extends BaseClass {
 		wlib.mouseHover(driver, hp.getMoreLink());
 		wlib.clickOnElement(driver, hp.getCampaignsLink());
 
+		/* Create Campaigns*/
 		CampaignPage cp = new CampaignPage(driver);
 		cp.getCreateCampaignBtn().click();
 		String NAME = eu.getDataFromExcel("Campaigns", 1, 2);
