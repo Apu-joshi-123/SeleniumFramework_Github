@@ -58,7 +58,6 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 	 */
 	public void onTestStart(ITestResult result) {
 		System.out.println("======>"+ result.getMethod().getMethodName() + "===START===");
-		ExtentTest test = report.createTest(result.getMethod().getMethodName());
 		UtilityClassObject.setTest(test);
 		test = report.createTest(result.getMethod().getMethodName());
 	}
