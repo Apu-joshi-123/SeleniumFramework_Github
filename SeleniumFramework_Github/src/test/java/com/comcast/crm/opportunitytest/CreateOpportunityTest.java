@@ -19,7 +19,8 @@ import com.comcast.crm.objectrepositoryutility.OpportunityPage;
  * 
  * @author Apurva
  */
-public class CreateOpportunity extends BaseClass {
+
+public class CreateOpportunityTest extends BaseClass {
 
 	/**
 	 * This method is used to Create Opportunity and Verify the information.

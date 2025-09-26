@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[====Connect To DB, Report Configuration====]]>
@@ -8,10 +8,13 @@
       <![CDATA[====Open Browser====]]>
     </line>
     <line>
-      <![CDATA[====Open Browser====]]>
+      <![CDATA[====Login To Application====]]>
     </line>
     <line>
-      <![CDATA[====Open Browser====]]>
+      <![CDATA[====Logout of Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Close Browser====]]>
     </line>
     <line>
       <![CDATA[====Open Browser====]]>
@@ -20,10 +23,13 @@
       <![CDATA[====Login To Application====]]>
     </line>
     <line>
-      <![CDATA[====Login To Application====]]>
+      <![CDATA[====Logout of Application====]]>
     </line>
     <line>
       <![CDATA[====Login To Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Logout of Application====]]>
     </line>
     <line>
       <![CDATA[====Login To Application====]]>
@@ -35,7 +41,10 @@
       <![CDATA[====Close Browser====]]>
     </line>
     <line>
-      <![CDATA[====Logout of Application====]]>
+      <![CDATA[====Open Browser====]]>
+    </line>
+    <line>
+      <![CDATA[====Login To Application====]]>
     </line>
     <line>
       <![CDATA[====Logout of Application====]]>
@@ -44,7 +53,46 @@
       <![CDATA[====Close Browser====]]>
     </line>
     <line>
+      <![CDATA[====Open Browser====]]>
+    </line>
+    <line>
+      <![CDATA[====Login To Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Logout of Application====]]>
+    </line>
+    <line>
       <![CDATA[====Close Browser====]]>
+    </line>
+    <line>
+      <![CDATA[====Open Browser====]]>
+    </line>
+    <line>
+      <![CDATA[====Login To Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Logout of Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Close Browser====]]>
+    </line>
+    <line>
+      <![CDATA[====Open Browser====]]>
+    </line>
+    <line>
+      <![CDATA[====Login To Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Logout of Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Login To Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Logout of Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Login To Application====]]>
     </line>
     <line>
       <![CDATA[====Logout of Application====]]>
@@ -56,262 +104,310 @@
       <![CDATA[====Close DB Connection, Report Backup====]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-09-25T14:34:52 IST" name="Suite" finished-at="2025-09-25T14:35:48 IST" duration-ms="56191">
+  <suite started-at="2025-09-26T10:47:24 IST" name="Suite" finished-at="2025-09-26T10:53:43 IST" duration-ms="378911">
     <groups>
+      <group name="SmokeTest">
+        <method signature="CreateContactTest.createContact()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" name="createContact" class="com.comcast.crm.contacttest.CreateContactTest"/>
+        <method signature="CreateOrganizationTest.createOrganization()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" name="createOrganization" class="com.comcast.crm.organizationtest.CreateOrganizationTest"/>
+      </group> <!-- SmokeTest -->
+      <group name="RegressionTest">
+        <method signature="CreateContactTest.createContactWithDate()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" name="createContactWithDate" class="com.comcast.crm.contacttest.CreateContactTest"/>
+        <method signature="CreateContactTest.createContactWithOrganization()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" name="createContactWithOrganization" class="com.comcast.crm.contacttest.CreateContactTest"/>
+        <method signature="CreateOrganizationTest.createOrganizationWithIndustry()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" name="createOrganizationWithIndustry" class="com.comcast.crm.organizationtest.CreateOrganizationTest"/>
+        <method signature="CreateOrganizationTest.createOrganizationWithPhoneNumber()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" name="createOrganizationWithPhoneNumber" class="com.comcast.crm.organizationtest.CreateOrganizationTest"/>
+      </group> <!-- RegressionTest -->
     </groups>
-    <test started-at="2025-09-25T14:34:52 IST" name="Test2" finished-at="2025-09-25T14:35:36 IST" duration-ms="44012">
-      <class name="com.comcast.crm.leadstest.CreateLeads">
-        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:com.comcast.crm.leadstest.CreateLeads@799f10e1]" started-at="2025-09-25T14:34:52 IST" name="openBrowser" finished-at="2025-09-25T14:34:58 IST" duration-ms="5976" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-09-26T10:47:24 IST" name="Test" finished-at="2025-09-26T10:53:43 IST" duration-ms="378911">
+      <class name="com.comcast.crm.producttest.CreateProductTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.comcast.crm.producttest.CreateProductTest@6379eb]" started-at="2025-09-26T10:51:24 IST" name="openBrowser" finished-at="2025-09-26T10:51:27 IST" duration-ms="3146" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Open Browser====]]>
             </line>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="loginToApplication(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.comcast.crm.leadstest.CreateLeads@799f10e1]" started-at="2025-09-25T14:34:58 IST" name="loginToApplication" finished-at="2025-09-25T14:35:00 IST" duration-ms="2118" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://localhost:8888/]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.producttest.CreateProductTest@6379eb]" started-at="2025-09-26T10:51:27 IST" name="loginToApplication" finished-at="2025-09-26T10:51:35 IST" duration-ms="7459" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Login To Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- loginToApplication -->
-        <test-method signature="createLeads()[pri:0, instance:com.comcast.crm.leadstest.CreateLeads@799f10e1]" started-at="2025-09-25T14:35:00 IST" name="createLeads" finished-at="2025-09-25T14:35:32 IST" duration-ms="31936" status="PASS">
+        <test-method signature="createProduct()[pri:0, instance:com.comcast.crm.producttest.CreateProductTest@6379eb]" started-at="2025-09-26T10:51:35 IST" name="createProduct" finished-at="2025-09-26T10:51:57 IST" duration-ms="22354" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createLeads -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.leadstest.CreateLeads@799f10e1]" started-at="2025-09-25T14:35:32 IST" name="logout" finished-at="2025-09-25T14:35:35 IST" duration-ms="2821" status="PASS">
+        </test-method> <!-- createProduct -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.producttest.CreateProductTest@6379eb]" started-at="2025-09-26T10:51:57 IST" name="logout" finished-at="2025-09-26T10:52:00 IST" duration-ms="2227" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Logout of Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.leadstest.CreateLeads@799f10e1]" started-at="2025-09-25T14:35:35 IST" name="closeBrowser" finished-at="2025-09-25T14:35:36 IST" duration-ms="1093" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.producttest.CreateProductTest@6379eb]" started-at="2025-09-26T10:52:00 IST" name="closeBrowser" finished-at="2025-09-26T10:52:00 IST" duration-ms="263" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Close Browser====]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.comcast.crm.leadstest.CreateLeads -->
-    </test> <!-- Test2 -->
-    <test started-at="2025-09-25T14:34:52 IST" name="Test4" finished-at="2025-09-25T14:35:40 IST" duration-ms="47669">
-      <class name="com.comcast.crm.producttest.CreateProduct">
-        <test-method is-config="true" signature="connectToDB()[pri:0, instance:com.comcast.crm.producttest.CreateProduct@34a3d150]" started-at="2025-09-25T14:34:52 IST" name="connectToDB" finished-at="2025-09-25T14:34:52 IST" duration-ms="219" status="PASS">
+      </class> <!-- com.comcast.crm.producttest.CreateProductTest -->
+      <class name="com.comcast.crm.opportunitytest.CreateOpportunityTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@4cc451f2]" started-at="2025-09-26T10:50:32 IST" name="openBrowser" finished-at="2025-09-26T10:50:35 IST" duration-ms="2624" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Open Browser====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@4cc451f2]" started-at="2025-09-26T10:50:35 IST" name="loginToApplication" finished-at="2025-09-26T10:50:37 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Login To Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="createOpportunity()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@4cc451f2]" started-at="2025-09-26T10:50:37 IST" name="createOpportunity" finished-at="2025-09-26T10:51:21 IST" duration-ms="44198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOpportunity -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@4cc451f2]" started-at="2025-09-26T10:51:21 IST" name="logout" finished-at="2025-09-26T10:51:24 IST" duration-ms="2860" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Logout of Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunityTest@4cc451f2]" started-at="2025-09-26T10:51:24 IST" name="closeBrowser" finished-at="2025-09-26T10:51:24 IST" duration-ms="295" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Close Browser====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.comcast.crm.opportunitytest.CreateOpportunityTest -->
+      <class name="com.comcast.crm.leadstest.CreateLeadsTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.comcast.crm.leadstest.CreateLeadsTest@4a94ee4]" started-at="2025-09-26T10:49:59 IST" name="openBrowser" finished-at="2025-09-26T10:50:02 IST" duration-ms="3073" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Open Browser====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.leadstest.CreateLeadsTest@4a94ee4]" started-at="2025-09-26T10:50:02 IST" name="loginToApplication" finished-at="2025-09-26T10:50:04 IST" duration-ms="1996" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Login To Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="createLeads()[pri:0, instance:com.comcast.crm.leadstest.CreateLeadsTest@4a94ee4]" started-at="2025-09-26T10:50:04 IST" name="createLeads" finished-at="2025-09-26T10:50:29 IST" duration-ms="25103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLeads -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.leadstest.CreateLeadsTest@4a94ee4]" started-at="2025-09-26T10:50:29 IST" name="logout" finished-at="2025-09-26T10:50:32 IST" duration-ms="2465" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Logout of Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.leadstest.CreateLeadsTest@4a94ee4]" started-at="2025-09-26T10:50:32 IST" name="closeBrowser" finished-at="2025-09-26T10:50:32 IST" duration-ms="314" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Close Browser====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.comcast.crm.leadstest.CreateLeadsTest -->
+      <class name="com.comcast.crm.organizationtest.CreateOrganizationTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" started-at="2025-09-26T10:52:00 IST" name="openBrowser" finished-at="2025-09-26T10:52:03 IST" duration-ms="2869" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Open Browser====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" started-at="2025-09-26T10:52:03 IST" name="loginToApplication" finished-at="2025-09-26T10:52:09 IST" duration-ms="5881" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Login To Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="createOrganization()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" started-at="2025-09-26T10:52:09 IST" name="createOrganization" finished-at="2025-09-26T10:52:37 IST" duration-ms="27874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrganization -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" started-at="2025-09-26T10:52:37 IST" name="logout" finished-at="2025-09-26T10:52:40 IST" duration-ms="2916" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Logout of Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" started-at="2025-09-26T10:52:40 IST" name="loginToApplication" finished-at="2025-09-26T10:52:45 IST" duration-ms="5336" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Login To Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="createOrganizationWithIndustry()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" started-at="2025-09-26T10:52:45 IST" name="createOrganizationWithIndustry" finished-at="2025-09-26T10:53:07 IST" duration-ms="22266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrganizationWithIndustry -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" started-at="2025-09-26T10:53:08 IST" name="logout" finished-at="2025-09-26T10:53:11 IST" duration-ms="3109" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Logout of Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" started-at="2025-09-26T10:53:11 IST" name="loginToApplication" finished-at="2025-09-26T10:53:17 IST" duration-ms="6021" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Login To Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="createOrganizationWithPhoneNumber()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" started-at="2025-09-26T10:53:17 IST" name="createOrganizationWithPhoneNumber" finished-at="2025-09-26T10:53:40 IST" duration-ms="22804" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrganizationWithPhoneNumber -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" started-at="2025-09-26T10:53:40 IST" name="logout" finished-at="2025-09-26T10:53:43 IST" duration-ms="2821" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Logout of Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.organizationtest.CreateOrganizationTest@294425a7]" started-at="2025-09-26T10:53:43 IST" name="closeBrowser" finished-at="2025-09-26T10:53:43 IST" duration-ms="252" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Close Browser====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.comcast.crm.organizationtest.CreateOrganizationTest -->
+      <class name="com.comcast.crm.troubleticketstest.CreateTroubleTicketsTest">
+        <test-method is-config="true" signature="connectToDB()[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTicketsTest@4f6ee6e4]" started-at="2025-09-26T10:47:24 IST" name="connectToDB" finished-at="2025-09-26T10:47:24 IST" duration-ms="545" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Connect To DB, Report Configuration====]]>
             </line>
           </reporter-output>
         </test-method> <!-- connectToDB -->
-        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:com.comcast.crm.producttest.CreateProduct@34a3d150]" started-at="2025-09-25T14:34:52 IST" name="openBrowser" finished-at="2025-09-25T14:34:59 IST" duration-ms="7074" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTicketsTest@4f6ee6e4]" started-at="2025-09-26T10:47:24 IST" name="openBrowser" finished-at="2025-09-26T10:47:31 IST" duration-ms="6639" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Open Browser====]]>
             </line>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="loginToApplication(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.comcast.crm.producttest.CreateProduct@34a3d150]" started-at="2025-09-25T14:34:59 IST" name="loginToApplication" finished-at="2025-09-25T14:35:02 IST" duration-ms="3134" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://localhost:8888/]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTicketsTest@4f6ee6e4]" started-at="2025-09-26T10:47:31 IST" name="loginToApplication" finished-at="2025-09-26T10:47:32 IST" duration-ms="1701" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Login To Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- loginToApplication -->
-        <test-method signature="createProduct()[pri:0, instance:com.comcast.crm.producttest.CreateProduct@34a3d150]" started-at="2025-09-25T14:35:02 IST" name="createProduct" finished-at="2025-09-25T14:35:37 IST" duration-ms="34434" status="PASS">
+        <test-method signature="createTroubleTickets()[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTicketsTest@4f6ee6e4]" started-at="2025-09-26T10:47:32 IST" name="createTroubleTickets" finished-at="2025-09-26T10:47:53 IST" duration-ms="20869" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createProduct -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.producttest.CreateProduct@34a3d150]" started-at="2025-09-25T14:35:37 IST" name="logout" finished-at="2025-09-25T14:35:39 IST" duration-ms="2431" status="PASS">
+        </test-method> <!-- createTroubleTickets -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTicketsTest@4f6ee6e4]" started-at="2025-09-26T10:47:54 IST" name="logout" finished-at="2025-09-26T10:48:00 IST" duration-ms="6188" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Logout of Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.producttest.CreateProduct@34a3d150]" started-at="2025-09-25T14:35:39 IST" name="closeBrowser" finished-at="2025-09-25T14:35:40 IST" duration-ms="565" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTicketsTest@4f6ee6e4]" started-at="2025-09-26T10:48:00 IST" name="closeBrowser" finished-at="2025-09-26T10:48:00 IST" duration-ms="440" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Close Browser====]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="closeDBConnection()[pri:0, instance:com.comcast.crm.producttest.CreateProduct@34a3d150]" started-at="2025-09-25T14:35:48 IST" name="closeDBConnection" finished-at="2025-09-25T14:35:48 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeDBConnection()[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTicketsTest@4f6ee6e4]" started-at="2025-09-26T10:53:43 IST" name="closeDBConnection" finished-at="2025-09-26T10:53:43 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Close DB Connection, Report Backup====]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeDBConnection -->
-      </class> <!-- com.comcast.crm.producttest.CreateProduct -->
-    </test> <!-- Test4 -->
-    <test started-at="2025-09-25T14:34:52 IST" name="Test1" finished-at="2025-09-25T14:35:40 IST" duration-ms="48269">
-      <class name="com.comcast.crm.troubleticketstest.CreateTroubleTickets">
-        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTickets@399f45b1]" started-at="2025-09-25T14:34:52 IST" name="openBrowser" finished-at="2025-09-25T14:35:00 IST" duration-ms="7445" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+      </class> <!-- com.comcast.crm.troubleticketstest.CreateTroubleTicketsTest -->
+      <class name="com.comcast.crm.contacttest.CreateContactTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" started-at="2025-09-26T10:48:00 IST" name="openBrowser" finished-at="2025-09-26T10:48:03 IST" duration-ms="3212" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Open Browser====]]>
             </line>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="loginToApplication(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTickets@399f45b1]" started-at="2025-09-25T14:35:00 IST" name="loginToApplication" finished-at="2025-09-25T14:35:02 IST" duration-ms="2310" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://localhost:8888/]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" started-at="2025-09-26T10:48:03 IST" name="loginToApplication" finished-at="2025-09-26T10:48:10 IST" duration-ms="6534" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Login To Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- loginToApplication -->
-        <test-method signature="createTroubleTickets()[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTickets@399f45b1]" started-at="2025-09-25T14:35:02 IST" name="createTroubleTickets" finished-at="2025-09-25T14:35:38 IST" duration-ms="35788" status="PASS">
+        <test-method signature="createContact()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" started-at="2025-09-26T10:48:10 IST" name="createContact" finished-at="2025-09-26T10:48:32 IST" duration-ms="22006" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createTroubleTickets -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTickets@399f45b1]" started-at="2025-09-25T14:35:38 IST" name="logout" finished-at="2025-09-25T14:35:40 IST" duration-ms="2315" status="PASS">
+        </test-method> <!-- createContact -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" started-at="2025-09-26T10:48:32 IST" name="logout" finished-at="2025-09-26T10:48:35 IST" duration-ms="2909" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Logout of Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.troubleticketstest.CreateTroubleTickets@399f45b1]" started-at="2025-09-25T14:35:40 IST" name="closeBrowser" finished-at="2025-09-25T14:35:40 IST" duration-ms="379" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[====Close Browser====]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.comcast.crm.troubleticketstest.CreateTroubleTickets -->
-    </test> <!-- Test1 -->
-    <test started-at="2025-09-25T14:34:52 IST" name="Test3" finished-at="2025-09-25T14:35:48 IST" duration-ms="56191">
-      <class name="com.comcast.crm.opportunitytest.CreateOpportunity">
-        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunity@313ac989]" started-at="2025-09-25T14:34:52 IST" name="openBrowser" finished-at="2025-09-25T14:34:58 IST" duration-ms="6244" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[====Open Browser====]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="loginToApplication(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunity@313ac989]" started-at="2025-09-25T14:34:58 IST" name="loginToApplication" finished-at="2025-09-25T14:35:01 IST" duration-ms="2581" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://localhost:8888/]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" started-at="2025-09-26T10:48:35 IST" name="loginToApplication" finished-at="2025-09-26T10:48:37 IST" duration-ms="1612" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Login To Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- loginToApplication -->
-        <test-method signature="createOpportunity()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunity@313ac989]" started-at="2025-09-25T14:35:01 IST" name="createOpportunity" finished-at="2025-09-25T14:35:47 IST" duration-ms="45991" status="PASS">
+        <test-method signature="createContactWithDate()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" started-at="2025-09-26T10:48:37 IST" name="createContactWithDate" finished-at="2025-09-26T10:49:02 IST" duration-ms="24971" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createOpportunity -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunity@313ac989]" started-at="2025-09-25T14:35:47 IST" name="logout" finished-at="2025-09-25T14:35:48 IST" duration-ms="1094" status="PASS">
+        </test-method> <!-- createContactWithDate -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" started-at="2025-09-26T10:49:02 IST" name="logout" finished-at="2025-09-26T10:49:05 IST" duration-ms="2936" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Logout of Application====]]>
             </line>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.opportunitytest.CreateOpportunity@313ac989]" started-at="2025-09-25T14:35:48 IST" name="closeBrowser" finished-at="2025-09-25T14:35:48 IST" duration-ms="251" status="PASS">
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" started-at="2025-09-26T10:49:05 IST" name="loginToApplication" finished-at="2025-09-26T10:49:07 IST" duration-ms="1724" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Login To Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="createContactWithOrganization()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" started-at="2025-09-26T10:49:07 IST" name="createContactWithOrganization" finished-at="2025-09-26T10:49:55 IST" duration-ms="48240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactWithOrganization -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" started-at="2025-09-26T10:49:55 IST" name="logout" finished-at="2025-09-26T10:49:58 IST" duration-ms="3299" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Logout of Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@7b9a4292]" started-at="2025-09-26T10:49:58 IST" name="closeBrowser" finished-at="2025-09-26T10:49:59 IST" duration-ms="455" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====Close Browser====]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.comcast.crm.opportunitytest.CreateOpportunity -->
-    </test> <!-- Test3 -->
+      </class> <!-- com.comcast.crm.contacttest.CreateContactTest -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

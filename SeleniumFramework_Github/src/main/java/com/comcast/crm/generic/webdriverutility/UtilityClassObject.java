@@ -41,8 +41,8 @@ public class UtilityClassObject {
 	 * This method is used to set the WebDriver reference
 	 * @param udriver
 	 */
-	public static void setDriver(WebDriver udriver) {
-		driver.set(udriver);
+	public static void setDriver(WebDriver actdriver) {
+		driver.set(actdriver);
 	}
 	
 	

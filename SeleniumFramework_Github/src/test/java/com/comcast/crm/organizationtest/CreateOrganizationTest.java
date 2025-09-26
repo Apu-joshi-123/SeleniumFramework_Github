@@ -19,7 +19,8 @@ import com.comcast.crm.objectrepositoryutility.OrganizationPage;
  * 
  * @author Apurva
  */
-public class CreateOrganization extends BaseClass {
+
+public class CreateOrganizationTest extends BaseClass {
 
 	/**
 	 * This method is used to Create the Organization.
@@ -119,7 +120,7 @@ public class CreateOrganization extends BaseClass {
 		/* Verify Phone Number */
 		String actPhoneNum = cip.getPhoneNum().getText();
 		SoftAssert assertobj = new SoftAssert();
-		assertobj.assertEquals(actPhoneNum, PHONENUM);
+		assertobj.assertEquals(actPhoneNum.trim(), PHONENUM);
 		assertobj.assertAll();
 	}
 }

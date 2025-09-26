@@ -16,7 +16,8 @@ import com.comcast.crm.objectrepositoryutility.ProductPage;
  * 
  * @author Apurva
  */
-public class CreateProduct extends BaseClass {
+
+public class CreateProductTest extends BaseClass {
 
 	/**
 	 * This method is used to Create Products and Verify the information.
