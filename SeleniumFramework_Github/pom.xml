@@ -40,7 +40,6 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.34</version> <!-- latest -->
-			<scope>provided</scope>
 		</dependency>
 
 		<!--
