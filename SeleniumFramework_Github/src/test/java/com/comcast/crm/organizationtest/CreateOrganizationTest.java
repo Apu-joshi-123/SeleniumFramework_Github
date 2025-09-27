@@ -41,12 +41,14 @@ public class CreateOrganizationTest extends BaseClass {
 		cp.getCreateOrganization().click();
 		CreatingNewOrganizationPage cnc = new CreatingNewOrganizationPage(driver);
 		cnc.createOrg(ORGNAME);
+		System.out.println("Organization Created");
 
 		/* Verify Header */
 		OrganizationInfoPage cip = new OrganizationInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
 		boolean status = header.contains(ORGNAME);
 		Assert.assertEquals(status, true);
+		System.out.println("Organization Verified");
 	}
 
 	/**
@@ -70,22 +72,26 @@ public class CreateOrganizationTest extends BaseClass {
 		op.getCreateOrganization().click();
 		CreatingNewOrganizationPage cnop = new CreatingNewOrganizationPage(driver);
 		cnop.handleDropdown(ORGNAME, INDUSTRY, TYPE);
+		System.out.println("Organization Created");
 
 		/* Verify the Header */
 		OrganizationInfoPage oip = new OrganizationInfoPage(driver);
 		String actOrgName = oip.getHeaderInfo().getText();
 		boolean status = actOrgName.contains(ORGNAME);
 		Assert.assertEquals(status, true);
+		System.out.println("Header Verified");
 
 		/* Verify Industry */
 		String actIndustry = oip.getIndustry().getText();
 		SoftAssert assertobj = new SoftAssert();
 		assertobj.assertEquals(actIndustry.trim(), INDUSTRY);
+		System.out.println("Industry Verified");
 
 		/* Verify Type */
 		String actType = oip.getType().getText();
 		assertobj.assertEquals(actType.trim(), TYPE);
 		assertobj.assertAll();
+		System.out.println("Type Verified");
 	}
 
 	/**
@@ -110,17 +116,20 @@ public class CreateOrganizationTest extends BaseClass {
 		cnop.getOrgname().sendKeys(ORGNAME);
 		cnop.getPhoneNumber().sendKeys(PHONENUM);
 		cnop.getSaveButton().click();
+		System.out.println("Organization Created");
 
 		/* Verify Header */
 		OrganizationInfoPage cip = new OrganizationInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
 		boolean status = header.contains(ORGNAME);
 		Assert.assertEquals(status, true);
+		System.out.println("Header Verified");
 
 		/* Verify Phone Number */
 		String actPhoneNum = cip.getPhoneNum().getText();
 		SoftAssert assertobj = new SoftAssert();
 		assertobj.assertEquals(actPhoneNum.trim(), PHONENUM);
 		assertobj.assertAll();
+		System.out.println("Phone Number Verified");
 	}
 }
