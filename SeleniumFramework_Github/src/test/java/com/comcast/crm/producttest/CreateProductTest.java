@@ -38,11 +38,13 @@ public class CreateProductTest extends BaseClass {
 		cp.getCreateProductBtn().click();
 		CreatingNewProduct cnc = new CreatingNewProduct(driver);
 		cnc.createProduct(PRONAME);
+		System.out.println("Product Created");
 
 		/* Verify the Header */
 		ProductInfoPage cip = new ProductInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
 		boolean status = header.contains(PRONAME);
 		Assert.assertEquals(status, true);
+		System.out.println("Product Verified");
 	}
 }

@@ -40,18 +40,21 @@ public class CreateLeadsTest extends BaseClass {
 		lep.getCreateLeadBtn().click();
 		CreatingNewLeads cnl = new CreatingNewLeads(driver);
 		cnl.createLeads(LASTNAME, COMPANY);
+		System.out.println("Leads Created");
 
 		/* Verify the Header */
 		LeadsInfoPage lip = new LeadsInfoPage(driver);
 		String header = lip.getHeaderInfo().getText();
 		boolean status = header.contains(LASTNAME);
 		Assert.assertEquals(status, true);
+		System.out.println("Header Verified");
 
 		/* Verify the Company */
 		String company = lip.getCompany().getText();
 		SoftAssert assertobj = new SoftAssert();
 		assertobj.assertEquals(company.trim(), COMPANY);
 		assertobj.assertAll();
+		System.out.println("Company Verified");
 
 	}
 

@@ -42,6 +42,7 @@ public class CreateOpportunityTest extends BaseClass {
 		cp.getCreateContact().click();
 		CreatingNewContact cnc = new CreatingNewContact(driver);
 		cnc.createContact(CONTACTS);
+		System.out.println("Contact Created");
 
 		/* Navigate and create Opportunity Using Company */
 		hp.getOpportunitiesLink().click();
@@ -54,18 +55,21 @@ public class CreateOpportunityTest extends BaseClass {
 		/* Switch to Parent Window */
 		wu.switchToTabOnURL(driver, "module=Potentials");
 		cno.getSaveBtn().click();
+		System.out.println("Opportunity Created");
 
 		/* Verify the Header */
 		OpportunitiesInfoPage oip = new OpportunitiesInfoPage(driver);
 		String header = oip.getHeaderInfo().getText();
 		boolean status = header.contains(OPPORTUNITY);
 		Assert.assertEquals(status, true);
+		System.out.println("Header Verified");
 
 		/* Verify Contacts */
 		String contactname = oip.getRelatedToInfo().getText();
 		SoftAssert assertobj = new SoftAssert();
 		assertobj.assertEquals(contactname.trim(), CONTACTS);
 		assertobj.assertAll();
+		System.out.println("Contact Verified");
 
 	}
 }

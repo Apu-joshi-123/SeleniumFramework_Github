@@ -43,12 +43,14 @@ public class CreateContactTest extends BaseClass {
 		cp.getCreateContact().click();
 		CreatingNewContact cnc = new CreatingNewContact(driver);
 		cnc.createContact(LASTNAME);
+		System.out.println("Contact created");
 
 		/* Verify Header */
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
 		boolean status = header.contains(LASTNAME);
 		Assert.assertEquals(status, true);
+		System.out.println("Contact Verified");
 	}
 
 	/**
@@ -74,6 +76,7 @@ public class CreateContactTest extends BaseClass {
 		CreatingNewOrganizationPage cnop = new CreatingNewOrganizationPage(driver);
 		cnop.createOrg(ORGNAME);
 		Thread.sleep(2000);
+		System.out.println("Organization created");
 
 		/* Navigate and Create Contact */
 		hp.getContactsLink().click();
@@ -86,18 +89,21 @@ public class CreateContactTest extends BaseClass {
 		/* Switch to Parent Window */
 		wu.switchToTabOnURL(driver, "module=Contacts");
 		cnc.getSaveBtn().click();
+		System.out.println("Contact created");
 
 		/* Verify Header */
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
 		boolean status = header.contains(LASTNAME);
 		Assert.assertEquals(status, true);
+		System.out.println("Contact Verified");
 
 		/* Verify the Organization */
 		String org = cip.getOrgInfo().getText();
 		SoftAssert assertobj = new SoftAssert();
 		assertobj.assertEquals(org.trim(), ORGNAME);
 		assertobj.assertAll();
+		System.out.println("Organization Verified");
 	}
 
 	/**
@@ -122,20 +128,24 @@ public class CreateContactTest extends BaseClass {
 		String ENDDATE = ju.getRequiredDateYYYYMMDD(30);
 		CreatingNewContact cnc = new CreatingNewContact(driver);
 		cnc.createContactWithSupportDate(LASTNAME, STARTDATE, ENDDATE);
+		System.out.println("Contact created");
 
 		/* Verify Header */
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
 		boolean status = header.contains(LASTNAME);
 		Assert.assertEquals(status, true);
+		System.out.println("Contact Verified");
 
 		/* Verify Support Date */
 		String supportStartDate = cip.getStartDateInfo().getText();
 		SoftAssert assertobj = new SoftAssert();
 		assertobj.assertEquals(supportStartDate, STARTDATE);
+		System.out.println("Support Start Date Verified");
 
 		String supportEndDate = cip.getEndDateInfo().getText();
 		assertobj.assertEquals(supportEndDate, ENDDATE);
 		assertobj.assertAll();
+		System.out.println("Support End Date Verified");
 	}
 }

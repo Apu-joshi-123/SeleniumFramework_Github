@@ -38,11 +38,13 @@ public class CreateTroubleTicketsTest extends BaseClass {
 		cp.getCreateTicketBtn().click();
 		CreatingNewTroubleTicket cnc = new CreatingNewTroubleTicket(driver);
 		cnc.createTickets(LASTNAME);
+		System.out.println("Trouble Tickets Created");
 
 		/* Verify the Header */
 		TroubleTicketsInfoPage cip = new TroubleTicketsInfoPage(driver);
 		String header = cip.getHeaderInfo().getText();
 		boolean status = header.contains(LASTNAME);
 		Assert.assertEquals(status, true);
+		System.out.println("Header Verified");
 	}
 }
